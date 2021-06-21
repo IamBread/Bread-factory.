@@ -1,12 +1,13 @@
 #!/bin/bash
 
 bread=$1
-if [ -z "$bread" ]
+topping=$2
+if [ -z "$bread" ] && [ -z "$topping" ] 
 then 
-	echo "Missing bread type."
+	echo "An input parameter is missing."
 else
 	while true; do
-		echo "Making a $bread bread."
+		echo "Making a $bread bread with $topping topping."
 		sleep 10
 	done
 fi
